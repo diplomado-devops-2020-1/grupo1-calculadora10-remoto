@@ -5,6 +5,7 @@ public class Validator {
     private static final String PLUS_SIGN = "\\++";
     private static final String MINUS_SIGN = "\\-+";
     private static final String MULTIPLICATION_SIGN = "\\*+";
+    private static final String DIVISION_SIGN = "\\/+";
     private static final String PARENTHESES_OPEN = "\\(+";
     private static final String PARENTHESES_CLOSE = "\\)+";
     private static final String DOT_SIGN = "\\.+";
@@ -20,6 +21,7 @@ public class Validator {
         String aux = sentence.replaceAll(PLUS_SIGN, "");
         aux = aux.replaceAll(MINUS_SIGN, "");
         aux = aux.replaceAll(MULTIPLICATION_SIGN, "");
+        aux = aux.replaceAll(DIVISION_SIGN, "");
         if(!aux.isEmpty()){
             throw new IllegalArgumentException("OPERACION_NO_VALIDA");
         }
